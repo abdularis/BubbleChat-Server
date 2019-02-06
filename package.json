@@ -4,7 +4,7 @@
   "private": true,
   "description": "backend for bubble chat app",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "./node_modules/.bin/babel-node ./bin/www"
   },
   "author": "Abdul Aris R",
   "license": "ISC",

@@ -1,7 +1,12 @@
 const express = require('express');
+const { OtpRecord } = require('../../models/models');
+
 const router = express.Router();
 
-router.get('/signin', (req, res) => {
+router.post('/signin', (req, res) => {
+    OtpRecord.build({
+        phoneNumber: "6281221484831"
+    }).save();
     res.send({
         'token': "jwt-token-here"
     });
