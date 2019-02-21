@@ -1,5 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define('otp_records', {
+        code: {
+            type: DataTypes.STRING(12),
+            allowNull: false
+        },
         phoneNumber: {
             type: DataTypes.STRING(20),
             allowNull: false
