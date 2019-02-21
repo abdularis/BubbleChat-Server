@@ -42,6 +42,7 @@ router.post('/signin', signinValidator, (req, res) => {
     })
     .then(result => {
         res.send({
+            'expire': result.expireAt,
             'test_otp': result.code
         });
     })
