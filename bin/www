@@ -27,7 +27,9 @@ const server = http.createServer(app);
  * Create socket.io server
  */
 const io = IO(server);
-io.on('connection', wsApp.onConnection);
+io.on('connection', function(socket) {
+  wsApp.onConnection(io, socket);
+});
 
 /**
  * Listen on provided port, on all network interfaces.
